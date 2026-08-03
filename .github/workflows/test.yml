@@ -27,10 +27,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-      - uses: Homebrew/actions/setup-homebrew@fd832223f9f99ebf0244dd20658680e5d4aca049
-      - name: Tap the exact checked-out revision
-        run: brew tap MarinJursic/tap "$GITHUB_WORKSPACE"
+      - uses: Homebrew/actions/setup-homebrew@1f8e202ffddf94def7f42f6fa3a482e821489f9c # 2026.07.10.1
       - name: Audit formula
         run: brew audit --strict MarinJursic/tap/fixcard
       - name: Install formula
