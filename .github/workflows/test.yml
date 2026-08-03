@@ -1,0 +1,38 @@
+name: Test formulae
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: formula-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  fixcard:
+    name: Fixcard (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - macos-15
+          - macos-15-intel
+          - ubuntu-24.04
+          - ubuntu-24.04-arm
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@1f8e202ffddf94def7f42f6fa3a482e821489f9c # 2026.07.10.1
+      - name: Audit formula
+        run: brew audit --strict MarinJursic/tap/fixcard
+      - name: Install formula
+        run: brew install MarinJursic/tap/fixcard
+      - name: Test formula
+        run: brew test MarinJursic/tap/fixcard
+      - name: Smoke test linked binary
+        run: fixcard --version
