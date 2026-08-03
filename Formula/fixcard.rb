@@ -1,7 +1,6 @@
 class Fixcard < Formula
   desc "Recall proven development fixes without executing card content"
   homepage "https://github.com/MarinJursic/fixcard"
-  version "1.0.0-rc.2"
   license "Apache-2.0"
 
   on_macos do
