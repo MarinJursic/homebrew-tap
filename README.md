@@ -11,6 +11,7 @@ fully qualified formula name:
 ```bash
 brew install MarinJursic/tap/fixcard
 fixcard --version
+fix --version
 ```
 
 The fully qualified command trusts only this formula rather than every formula
