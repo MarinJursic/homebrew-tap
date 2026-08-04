@@ -35,4 +35,7 @@ jobs:
       - name: Test formula
         run: brew test MarinJursic/tap/fixcard
       - name: Smoke test linked binary
-        run: fixcard --version
+        run: |
+          fixcard --version
+          fix --version
+          fix "$(command -v fixcard)" --version
