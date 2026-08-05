@@ -5,21 +5,21 @@ class Fixcard < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/MarinJursic/fixcard/releases/download/v1.0.0-rc.5/fixcard-1.0.0-rc.5-aarch64-apple-darwin.tar.gz"
-      sha256 "6e8a4147def87a8bad34d7e276dd5926b58366767e73314c2da89d2a38fbdcaa"
+      url "https://github.com/MarinJursic/fixcard/releases/download/v1.0.0-rc.6/fixcard-1.0.0-rc.6-aarch64-apple-darwin.tar.gz"
+      sha256 "faec6a30e09b03bed3912085f0279a5162f7c72e2f2fdc3984ee59f402506133"
     else
-      url "https://github.com/MarinJursic/fixcard/releases/download/v1.0.0-rc.5/fixcard-1.0.0-rc.5-x86_64-apple-darwin.tar.gz"
-      sha256 "9b851fc40475410c11f2c8488cf860d12185dceed0fef6c60fdfe0d4ce2acc4e"
+      url "https://github.com/MarinJursic/fixcard/releases/download/v1.0.0-rc.6/fixcard-1.0.0-rc.6-x86_64-apple-darwin.tar.gz"
+      sha256 "202f32719d7b39c253605d62a342938beb9ad0bc77bbeefff1c93670c2670bd7"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/MarinJursic/fixcard/releases/download/v1.0.0-rc.5/fixcard-1.0.0-rc.5-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "1eb7c642522ce4ce360ecda40b36fdb97057769f2438914189d3cf0db98c995b"
+      url "https://github.com/MarinJursic/fixcard/releases/download/v1.0.0-rc.6/fixcard-1.0.0-rc.6-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "946f2edb791858a43029460f5b98cb8c414558bb01e47258e296537407a673a7"
     else
-      url "https://github.com/MarinJursic/fixcard/releases/download/v1.0.0-rc.5/fixcard-1.0.0-rc.5-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "052e5e5827198093b0d73f3c28a7a573ec6246d33f10968dc74c6303213b0118"
+      url "https://github.com/MarinJursic/fixcard/releases/download/v1.0.0-rc.6/fixcard-1.0.0-rc.6-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "64f7bf28f470303dd06bb9b1b938a69ce7650fa4c6719cbff466ecde694e8cdb"
     end
   end
 
