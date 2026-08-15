@@ -1,6 +1,6 @@
 # Homebrew tap
 
-Reviewed Homebrew formulae maintained by Marin Jursic.
+Homebrew formulae for installing checksum-pinned Fixcard release binaries.
 
 ## Fixcard
 
